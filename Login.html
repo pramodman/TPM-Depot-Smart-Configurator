@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - TPM Depot</title>
+</head>
+<body style="background-color:#f3f3f3; font-family:Arial;">
+<center>
+    <h1 style="color:blue; font-size:50px;">Login Page</h1>
+    <br><br>
+    <table border="1" cellpadding="20" style="background-color:white; border-radius:10px;">
+        <tr>
+            <td>
+                {% if error %}
+                    <p style="color:red; font-weight:bold;">{{ error }}</p>
+                {% endif %}
+                <form method="POST">
+                    <p style="font-size:20px;">Username:</p>
+                    <input type="text" name="username" placeholder="Enter Username" style="padding:10px; width:250px;">
+                    <br><br>
+                    <p style="font-size:20px;">Password:</p>
+                    <input type="password" name="password" placeholder="Enter Password" style="padding:10px; width:250px;">
+                    <br><br><br>
+                    <input type="submit" value="Sign In" style="background-color:blue; color:white; padding:10px 50px; font-size:18px; border:none;">
+                </form>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <p style="font-size:14px; color:gray;">Feel the difference</p>
+</center>
+</body>
+</html>
