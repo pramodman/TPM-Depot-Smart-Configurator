@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quote - TPM Depot</title>
+</head>
+<body style="background-color:#f0f0f0; font-family:Arial;">
+<center>
+    <h1 style="color:blue; font-size:50px;">Quote</h1>
+    <p style="font-size:18px;">TPM DEPOT<br>C Wing, Jai Ganesh Samrajya<br>Pune, Maharashtra</p>
+    <p style="font-size:16px;">Tel: 020-66530006 | Mob: +91 9850787650</p>
+    <hr style="height:5px; background-color:blue; width:80%;">
+    <br>
+
+    <!-- ✅ New Quote Section Title -->
+    <h2 style="color:#444;">Quote Details</h2>
+    <br>
+
+    <table border="1" cellpadding="15" width="50%" style="background:white;">
+        {% for item, price in selections %}
+            <tr>
+                <td style="font-size:18px;">{{ item }}</td>
+                <td style="font-size:18px; text-align:right;">${{ price }}</td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <td style="font-size:18px; font-weight:bold;">Total</td>
+            <td style="font-size:18px; text-align:right; font-weight:bold;">${{ total }}</td>
+        </tr>
+    </table>
+
+    <br><br>
+    <a href="/configurator" style="color:blue; font-size:20px; text-decoration:none;">Back to Configurator</a>
+</center>
+</body>
+</html>
